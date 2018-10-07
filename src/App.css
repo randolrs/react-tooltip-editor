@@ -1,5 +1,4 @@
 .App {
-  text-align: center;
 }
 
 .App-logo {
@@ -29,4 +28,236 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+div, section {
+  box-sizing: border-box;
+}
+
+.horizontal-panel-container {
+  display:  flex;
+  height:   100vh;
+}
+
+.horizontal-panel__fixed-width {
+  width:  300px;
+  height:   100%;
+  background:   #fff;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.horizontal-panel__fill {
+  flex:   1;
+  height:   100%;
+  background:   #fee;
+  padding: 10px;
+}
+
+@media(max-width: 900px) {
+  .horizontal-panel-container {
+    display:  block;
+  }
+
+  .horizontal-panel__fixed-width {
+    width:  100%;
+    height:   auto;
+  }
+
+  .horizontal-panel__fill {
+    flex:   auto;
+    height:   auto;
+    display: block;
+    padding: 50px;
+  }
+}
+
+#tooltip-preview, .tooltip-preview__container {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+#tooltip-preview {
+  display: table;
+}
+
+.tooltip-preview__container {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.tooltip-preview__hover-area {
+  display: inline-block;
+  padding: 100px;
+  border-radius: 5px;
+  border: 2px solid #616161;
+  position: relative;
+  max-width: 100%;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0px 1px 10px rgba(0,0,0,0.25);
+}
+
+.main-header {
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: underline;
+  margin-bottom: 15px;
+  color: #212121;
+  line-height: 30px;
+}
+
+.tooltip {
+  background: #333;
+  color: #fff;
+  padding: 10px 15px;
+  display: inline-block;
+  border-radius: 8px;
+  font-weight: 400;
+  text-shadow: 0px 1px 2px #212121;
+  position: absolute;
+  pointer-events : none;
+}
+
+.tooltip-container {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  transition: 0.2s background;
+}
+
+.tooltip-container:hover {
+  background: rgba(0,0,0,0.1);
+}
+
+.tooltip.preview, .tooltip-container.preview {
+  position: relative !important;
+}
+
+.tooltip.not-preview.top-left {
+  left: 0px;
+  top: -40px;
+}
+
+.tooltip.not-preview.top-center {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  top: -40px;
+}
+
+.tooltip.not-preview.top-right {
+  right: 0px;
+  top: -40px;
+}
+
+.tooltip.not-preview.center-left {
+  left: -100px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.tooltip.not-preview.center-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tooltip.not-preview.center-right {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: -100px;
+}
+
+.tooltip.not-preview.bottom-left {
+  bottom: -40px;
+  left: 0px;
+}
+
+.tooltip.not-preview.bottom-center {
+  bottom: -40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.tooltip.not-preview.bottom-right {
+  bottom: -40px;
+  right: 0px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  position: relative;
+  padding: 5px;
+}
+
+.form-group:last-child {
+  margin-bottom: 0px;
+}
+
+.form-group label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #424242;
+}
+
+.form-group .sublabel {
+  font-size: 14px;
+  color: #9e9e9e;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form-group input {
+  padding: 10px 0px;
+  text-indent: 5px;
+  border-radius: 2px;
+  outline: none;
+  width: 100%;
+  border: 2px solid #ccc;
+}
+
+.select-button {
+  padding: 5px 15px;
+  font-size: 14px;
+  display: inline-block;
+  margin: 0px 10px 10px 0px;
+  background: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s background;
+  box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+  text-align: center;
+  background-color: #f9f9f9;
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#f9f9f9),to(#eeeeee));
+  background-image: -webkit-linear-gradient(to bottom,#f9f9f9,#eeeeee);
+  background-image: linear-gradient(to bottom,#f9f9f9,#eeeeee);
+  border: 1px solid #ccc;
+  color: #616161 !important;
+  text-decoration: none !important;
+}
+
+.select-button.active {
+    background: #283593;
+    border: 1px solid #1A237E;
+    color: #fff !important;
+    box-shadow: inset 0px 1px 5px rgba(0,0,0,0.1);
+}
+
+input.hidden {
+  display: none;
+}
+
+.submitted-by {
+  position: absolute;
+  padding: 10px;
+  right: 0px;
+  top: 0px;
+  line-height: 30px;
 }
