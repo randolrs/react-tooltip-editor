@@ -52,6 +52,13 @@ I added a simple media query to update the layout of the main view on mobile-ish
 
 If this was an application intended for production I would have spent more time ensuring that the layout and performance of the application were optimized for mobile. (I would probably have broken down the main form [title, position, delay] into seperate panels that the users went through one-at-a-time for mobile-sized screens).
 
+I would also use JS to implement dynamic positioning of the tooltip to avoid it going "off-screen" or otherwise stretching the layout.
+
+### More Dynamic Positioning
+
+Currently, the application allows 9 positioning option (essentially, within a 3 by 3 grid relative to the target).  If this application was intended for production, I would add a more dynamic way to set the positioning of the tooltip relative to the target (maybe with some drag-and-drop functionality).
+
+
 ### Input Validation
 
 If a user elects to enter their own values for tooltip appearance/disappearance delays, in the current state, they can enter invalid values.  These don't break the application, it just makes all delays 0 seconds.
