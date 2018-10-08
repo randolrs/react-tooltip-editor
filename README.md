@@ -52,6 +52,13 @@ I added a simple media query to update the layout of the main view on mobile-ish
 
 If this was an application intended for production I would have spent more time ensuring that the layout and performance of the application were optimized for mobile. (I would probably have broken down the main form [title, position, delay] into seperate panels that the users went through one-at-a-time for mobile-sized screens).
 
+### Input Validation
+
+If a user elects to enter their own values for tooltip appearance/disappearance delays, in the current state, they can enter invalid values.  These don't break the application, it just makes all delays 0 seconds.
+
+If this application was intended for production I would implement robust input validation along with well-written error messaging.
+
+
 ### JS Testing
 
 In the interest of time and since the data structures involved with this application were relatively simple (and the EditorInputs data was hand-coded by me), I elected not to implement a JS unit testing protocol (like MochaJS).  However, if the complexity of the application were greater, I would have implemented a JS unit testing protocol.
