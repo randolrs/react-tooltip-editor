@@ -9,7 +9,7 @@ class TooltipPreview extends Component {
 					<div
 						className="tooltip-preview__hover-area"
 					>
-						<span>Example Hover Area</span>
+						<span>Hover Over Me!</span>
 						{this.props.tooltipAttr.title.length > 0 ? 
 							<Tooltip
 								tooltipAttr={this.props.tooltipAttr}
